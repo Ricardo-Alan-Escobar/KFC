@@ -1,0 +1,333 @@
+:root {
+    --kfc-red: #E4002B;
+    --kfc-black: #202020;
+    --kfc-light-gray: #f5f5f5;
+    --kfc-gray: #e0e0e0;
+    --kfc-dark-gray: #707070;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: var(--kfc-light-gray);
+    color: var(--kfc-black);
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .header {
+    background-color: var(--kfc-red);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .logo {
+    width: 80px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    width: 100%; /* Asegura que tome el ancho completo disponible */
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex: 1;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--kfc-black);
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-title svg {
+    margin-right: 0.75rem;
+    color: var(--kfc-red);
+  }
+  
+  #reader {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--kfc-gray);
+  }
+  
+  thead {
+    background-color: var(--kfc-red);
+    color: white;
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--kfc-gray);
+  }
+  
+  tbody tr:hover {
+    background-color: var(--kfc-light-gray);
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .btn-primary {
+    background-color: var(--kfc-red);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #c10023;
+    box-shadow: 0 4px 8px rgba(228, 0, 43, 0.3);
+  }
+  
+  .btn-primary:disabled {
+    background-color: var(--kfc-dark-gray);
+    cursor: not-allowed;
+  }
+  
+  .btn-secondary {
+    background-color: var(--kfc-black);
+    color: white;
+    padding: 0.85rem 2rem;
+    
+  }
+  
+  .btn-secondary:hover {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .btn-container {
+
+    display: flex;
+    justify-content: end;
+  }
+  .scan-btn-container {
+    display: flex; 
+    justify-content: space-between;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .paginacion {
+    margin-top: 24px;
+    text-align: center;
+  }
+  
+  .paginacion button {
+    margin: 0 6px;
+    padding: 8px 14px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease;
+  }
+  
+  .paginacion button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+  }
+  
+  .pagina-activa {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
+    transform: scale(1.05);
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  .status-inactive {
+    background-color: var(--kfc-light-gray);
+    color: var(--kfc-dark-gray);
+  }
+  
+  .status-active {
+    background-color: #e6f7e6;
+    color: #2e7d32;
+  }
+  
+  .status-deactivated {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .bucket-decoration {
+    position: absolute;
+    width: 60px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      padding: 1.5rem;
+    }
+    
+    th, td {
+      padding: 0.75rem 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+    }
+    
+    .bucket-decoration {
+      width: 40px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    table {
+      display: block;
+      overflow-x: auto;
+    }
+    
+    th, td {
+      padding: 0.6rem 0.4rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+   /* Estilos específicos para el contenedor del escáner y botón cancelar */
+   #reader-container {
+    position: relative;
+    display: none;
+  }
+  
+  #cancel-scan {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #e4002b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #cancel-scan:hover {
+    background-color: #c00026;
+  }
+  /*Footer*/
+
+  .footer {
+    background-color: #1f2937;
+    color: #d1d5db;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: auto; /* Esto empuja el footer al final */
+    text-align: center;
+    font-size: 0.875rem;
+  }
+  #contadores div {
+    background-color: #f4f4f4;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    width: 3rem; /* w-12 */
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-version {
+    font-size: 0.75rem; /* text-xs */
+    color: #6b7280; /* text-gray-500 */
+  }
+  input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+input::placeholder {
+  color: #999;
+  font-style: italic;
+}
