@@ -40,7 +40,7 @@
         <div id="reader"></div>
       </div>
       <div class="formulario-vale">
-        <h3>Agregar Vale Manualmente</h3>
+        <h3>Agregar Vale</h3>
         <form id="form-agregar-vale">
           <input type="text" id="input-id" placeholder="ID del vale (ej. v0007)" required>
           <input type="number" id="input-cantidad" placeholder="Cantidad ($0.00)" required>
@@ -53,7 +53,7 @@
         <button onclick="escanearQR()" class="btn btn-secondary">
           <i class="fa-solid fa-qrcode"></i> Escanear QR
         </button>
-        <div id="contadores" style="display: flex; justify-content: end; gap: 20px; font-weight: 600;">
+        <div id="contadores" style="display: flex; justify-content: end; align-items: center; gap: 20px; font-weight: 600;">
             <div id="contador-activos">Activos: 0</div>
             <div id="contador-canjeados">Canjeados: 0</div>
           </div>
